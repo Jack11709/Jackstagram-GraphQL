@@ -1,0 +1,31 @@
+type Query {
+  posts: [Post]!
+  post(id: ID!): Post
+}
+
+type Mutation {
+  createPost(content: String!, image: String!): Post!
+  updatePost(id: ID!, content: String, image: String): Post!
+  deletePost(id: ID): Post
+  register(email: String!, password: String!, username: String): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+}
+
+type Post {
+  id: ID!
+  content: String!
+  image: String!
+  postedBy: User
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  posts: [Post!]!
+}
