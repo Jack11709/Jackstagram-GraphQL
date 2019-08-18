@@ -1,0 +1,1 @@
+A basic Instagram style clone site implementing a GraphQL API
