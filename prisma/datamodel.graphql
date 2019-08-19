@@ -1,17 +1,26 @@
 type Post {
   id: ID! @id
-  createdAt: DateTime @createdAt
-  updatedAt: DateTime @updatedAt
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
   content: String!
   image: String!
-  postedBy: User
+  owner: User
+  likes: [Like]!
 }
 
 type User {
   id: ID! @id
-  createdAt: DateTime @createdAt
+  createdAt: DateTime! @createdAt
   username: String!
   email: String! @unique
   password: String!
-  posts: [ Post! ]
+  posts: [Post!]
+  likes: [Like]!
+}
+
+type Like {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  post: Post!
+  user: User!
 }

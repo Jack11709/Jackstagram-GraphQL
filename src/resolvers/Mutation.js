@@ -5,7 +5,7 @@ const { getUserId } = require('../utils')
 
 const createPost = (root, args, ctx) => {
   const userId = getUserId(ctx)
-  return ctx.prisma.createPost({ ...args, postedBy: { connect: { id: userId } } })
+  return ctx.prisma.createPost({ ...args, owner: { connect: { id: userId } } })
 }
 
 // ! Fix this update resolver, currently not finding the id of the post
@@ -29,10 +29,24 @@ const login = async (root, args, ctx) => {
   return { token, user }
 }
 
+const like = async (root, args, ctx) => {
+  const userId = getUserId(ctx)
+  const postExists = await ctx.prisma.$exists.like({ 
+    user: { id: userId },
+    post: { id: args.postId }
+  })
+  if (postExists) throw new Error(`Already liked post ${args.postId}`)
+  return ctx.prisma.createLike({
+    user: { connect: { id: userId } },
+    post: { connect: { id: args.postId } }
+  })
+}
+
 module.exports = {
   createPost,
   updatePost,
   deletePost,
   register,
-  login
+  login,
+  like
 }
