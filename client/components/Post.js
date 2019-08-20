@@ -43,7 +43,6 @@ const PostStyles = styled.div`
 `
 
 const Post = props => {
-  console.log(props)
   return (
     <PostStyles>
       <div className="post-top">
