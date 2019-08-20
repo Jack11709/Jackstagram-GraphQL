@@ -1,24 +1,35 @@
-import styled from 'styled-components'
+import { Query } from 'react-apollo'
+import gql from 'graphql-tag'
+import Post from './Post'
 
-const Post = styled.div`
-  height: 300px;
-  max-width: 100%;
-  background-color: white;
-  border: 1px solid ${({ theme }) => theme.darkGrey };
-  margin-bottom: 6rem;
+const ALL_POSTS_QUERY = gql`
+  query ALL_POSTS_QUERY {
+    posts {
+      id
+      content
+      image
+      owner {
+        username
+      }
+      likes {
+        id
+      }
+    }
+  }
 `
 
 const Posts = () => (
-  <React.Fragment>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-    <Post>Content Goes Here</Post>
-  </React.Fragment>
+    <Query query={ALL_POSTS_QUERY}>
+      {({data, error, loading}) => {
+        if (error) return <p>Error</p>
+        if (loading) return <p>..Loading</p>
+        return (
+          <React.Fragment>
+            {data.posts.map(post => <Post key={post.id} {...post} />)}
+          </React.Fragment>
+        )
+      }}
+    </Query>
 )
 
 export default Posts

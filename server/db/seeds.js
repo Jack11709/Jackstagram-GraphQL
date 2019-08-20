@@ -10,15 +10,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302745/jackstagram/glfggbxsdzzgyb9u1jto.jpg'
         },
         {
           content: 'Can\'t stop making all these posts!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         },
         {
           content: 'One more for the gram!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302751/jackstagram/ygw7ccof8r3pznvsuu0m.jpg'
         }
       ]
     }
@@ -32,15 +32,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post too!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302745/jackstagram/htzoa03etagsrtlozd3v.jpg'
         },
         {
           content: 'Can\'t stop baking a bunch of cakes!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mxhi7rfawozzsi3x5amx.jpg'
         },
         {
           content: 'I 💖 Cheeseburger',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/h9lstbf2z16vfe11mqml.jpg'
         }
       ]
     }
@@ -54,15 +54,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post too!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306877/jackstagram/xkbonslxmscwdpn9fnl5.jpg'
         },
         {
           content: 'Doing stuff yo',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306878/jackstagram/uj4xiegs6iikwfxnnec3.jpg'
         },
         {
           content: 'Best day out!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306821/jackstagram/krsf35xnav7rrdsaxbb5.jpg'
         }
       ]
     }
@@ -76,15 +76,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post too!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         },
         {
           content: 'Some vegan things',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         },
         {
           content: 'Some brexit stuff',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         }
       ]
     }
@@ -98,15 +98,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post too!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306821/jackstagram/fwtdnitsrl5r6ewlh46p.jpg'
         },
         {
           content: 'Really growing into this nickname',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306821/jackstagram/tuoyzvcx01yvs4aalnaf.jpg'
         },
         {
           content: 'Marsha',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         }
       ]
     }
@@ -120,15 +120,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post too!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         },
         {
           content: 'Tout le monde!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306821/jackstagram/dnlnbz65x1qxy4pkmonw.jpg'
         },
         {
           content: 'Seeing some watches!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566306823/jackstagram/x2jxidncozbjyyzoueql.jpg'
         }
       ]
     }
@@ -142,15 +142,15 @@ const seed = async () => {
       create: [
         {
           content: 'Hey this is my first post too!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302751/jackstagram/ygw7ccof8r3pznvsuu0m.jpg'
         },
         {
           content: 'Some random post!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302745/jackstagram/glfggbxsdzzgyb9u1jto.jpg'
         },
         {
           content: 'some more random stuff!',
-          image: 'my-image-url'
+          image: 'https://res.cloudinary.com/dluvdbh8c/image/upload/v1566302744/jackstagram/mnn8aaim7c7mz8oi1x1c.jpg'
         }
       ]
     }

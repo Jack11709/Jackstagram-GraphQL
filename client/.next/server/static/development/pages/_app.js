@@ -175,6 +175,11 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobal
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'segoe-ui';
+    src: url('/static/Segoe-UI-Bold.woff')format('woff2');
+    font-weight: bold;
+  }
   html {
     box-sizing: border-box;
     font-size: 10px;
@@ -219,37 +224,37 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 60
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 61
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 62
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 63
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 64
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 65
       },
       __self: this
     }, this.props.children)));
@@ -355,8 +360,10 @@ const Navbar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav`
   display: flex;
   justify-content: space-between;
   p {
-    font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
+    span {
+      font-family: 'Dancing Script', cursive;
+    }
   }
 `;
 const IconContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
@@ -370,78 +377,84 @@ const IconContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.d
 const Nav = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Navbar, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 25
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 26
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 26
   },
   __self: undefined
-}, "\uD83D\uDCF7 | Jackstagram")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}, "\uD83D\uDCF7 | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 26
+  },
+  __self: undefined
+}, "Jackstagram"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 27
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
   placeholder: "\uD83D\uDD0E Search",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 26
+    lineNumber: 28
   },
   __self: undefined
 })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconContainer, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 30
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/new",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 31
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 31
   },
   __self: undefined
 }, "\u2795")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/explore",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 32
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 32
   },
   __self: undefined
 }, "\u2764")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/profile",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 33
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 33
   },
   __self: undefined
 }, "\uD83D\uDC71"))));
@@ -489,6 +502,58 @@ const Searchbar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   }
 `;
 /* harmony default export */ __webpack_exports__["default"] = (Searchbar);
+
+/***/ }),
+
+/***/ "./config/config.js":
+/*!**************************!*\
+  !*** ./config/config.js ***!
+  \**************************/
+/*! exports provided: endpoint */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "endpoint", function() { return endpoint; });
+const endpoint = 'http://localhost:4000';
+
+/***/ }),
+
+/***/ "./lib/withData.js":
+/*!*************************!*\
+  !*** ./lib/withData.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var next_with_apollo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next-with-apollo */ "next-with-apollo");
+/* harmony import */ var next_with_apollo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_with_apollo__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config/config */ "./config/config.js");
+
+
+
+
+function createClient({
+  headers
+}) {
+  return new apollo_boost__WEBPACK_IMPORTED_MODULE_1___default.a({
+    uri:  true ? _config_config__WEBPACK_IMPORTED_MODULE_2__["endpoint"] : undefined,
+    request: operation => {
+      operation.setContext({
+        fetchOptions: {
+          credentials: 'include'
+        },
+        headers
+      });
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (next_with_apollo__WEBPACK_IMPORTED_MODULE_0___default()(createClient));
 
 /***/ }),
 
@@ -1428,8 +1493,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _lib_withData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/withData */ "./lib/withData.js");
 
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/pages/_app.js";
+
+
 
 
 
@@ -1438,32 +1508,40 @@ class RootApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
   render() {
     const {
       Component,
-      pageProps
+      pageProps,
+      apollo
     } = this.props;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 11
       },
       __self: this
-    }))));
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
+      client: apollo,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    })))));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (RootApp);
+/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_withData__WEBPACK_IMPORTED_MODULE_5__["default"])(RootApp));
 
 /***/ }),
 
@@ -1476,6 +1554,17 @@ class RootApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
 
 /***/ }),
 
@@ -1578,6 +1667,17 @@ module.exports = require("next-server/dist/lib/utils");
 
 /***/ }),
 
+/***/ "next-with-apollo":
+/*!***********************************!*\
+  !*** external "next-with-apollo" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-with-apollo");
+
+/***/ }),
+
 /***/ "next/head":
 /*!****************************!*\
   !*** external "next/head" ***!
@@ -1619,6 +1719,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-apollo":
+/*!*******************************!*\
+  !*** external "react-apollo" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-apollo");
 
 /***/ }),
 

@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'segoe-ui';
+    src: url('/static/Segoe-UI-Bold.woff')format('woff2');
+    font-weight: bold;
+  }
   html {
     box-sizing: border-box;
     font-size: 10px;

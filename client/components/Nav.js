@@ -7,8 +7,10 @@ const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   p {
-    font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
+    span {
+      font-family: 'Dancing Script', cursive;
+    }
   }
 `
 const IconContainer = styled.div`
@@ -21,7 +23,7 @@ const IconContainer = styled.div`
 
 const Nav = () => (
   <Navbar>
-    <Link href="/"><p>📷 | Jackstagram</p></Link>
+    <Link href="/"><p>📷 | <span>Jackstagram</span></p></Link>
     <SearchBar>
       <input placeholder="🔎 Search"/>
     </SearchBar>
