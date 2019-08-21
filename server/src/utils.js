@@ -2,9 +2,8 @@ const jwt = require('jsonwebtoken')
 const { secret } = require('./config/environment')
 
 const getUserId = ctx => {
-  const auth = ctx.request.get('Authorization')
-  if (!auth) throw new Error('Unauthorized')
-  const token = auth.replace('Bearer ', '')
+  const token = ctx.request.cookies.token
+  if (!token) throw new Error('Unauthorized')
   const { userId } = jwt.verify(token, secret)
   return userId
 }

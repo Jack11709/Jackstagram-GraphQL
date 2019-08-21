@@ -93,10 +93,43 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Home.js":
-/*!****************************!*\
-  !*** ./components/Home.js ***!
-  \****************************/
+/***/ "./components/auth/Login.js":
+/*!**********************************!*\
+  !*** ./components/auth/Login.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/auth/Login.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const Login = () => __jsx("div", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 2
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 3
+  },
+  __self: undefined
+}, "Login Page"));
+
+/* harmony default export */ __webpack_exports__["default"] = (Login);
+
+/***/ }),
+
+/***/ "./components/posts/Home.js":
+/*!**********************************!*\
+  !*** ./components/posts/Home.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -106,8 +139,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Posts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Posts */ "./components/Posts.js");
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Home.js";
+/* harmony import */ var _Posts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Posts */ "./components/posts/Posts.js");
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/posts/Home.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -178,10 +211,10 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 /***/ }),
 
-/***/ "./components/Post.js":
-/*!****************************!*\
-  !*** ./components/Post.js ***!
-  \****************************/
+/***/ "./components/posts/Post.js":
+/*!**********************************!*\
+  !*** ./components/posts/Post.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -189,13 +222,211 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Post.js";
+/* harmony import */ var _styles_PostStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/PostStyles */ "./components/styles/PostStyles.js");
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/posts/Post.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const PostStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+
+const Post = props => {
+  return __jsx(_styles_PostStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "post-top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "\uD83D\uDC71 ", __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, props.owner.username))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, "\u25AA\u25AA\u25AA"))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: props.image,
+    alt: props.image,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "post-bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "bottom-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, "\u2764"), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, "\uD83D\uDCAC")), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, props.likes.length, " likes")), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, props.owner.username), " ", props.content)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Post);
+
+/***/ }),
+
+/***/ "./components/posts/Posts.js":
+/*!***********************************!*\
+  !*** ./components/posts/Posts.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/query */ "./lib/query.js");
+/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Post */ "./components/posts/Post.js");
+
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/posts/Posts.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+const Posts = () => __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Query"], {
+  query: _lib_query__WEBPACK_IMPORTED_MODULE_3__["ALL_POSTS_QUERY"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, ({
+  data,
+  error,
+  loading
+}) => {
+  if (error) return __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "Error");
+  if (loading) return __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "..Loading");
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, data.posts.map(post => __jsx(_Post__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    key: post.id
+  }, post, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }))));
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Posts);
+
+/***/ }),
+
+/***/ "./components/styles/PostStyles.js":
+/*!*****************************************!*\
+  !*** ./components/styles/PostStyles.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const PostStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   max-width: 100%;
   background-color: white;
   border: 1px solid ${({
@@ -238,147 +469,34 @@ const PostStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     font-weight: bold;
   }
 `;
-
-const Post = props => {
-  return __jsx(PostStyles, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "post-top",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: undefined
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }, "\uD83D\uDC71 ", __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }, props.owner.username))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: undefined
-  }, "\u25AA\u25AA\u25AA"))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: props.image,
-    alt: props.image,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "post-bottom",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "bottom-icons",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: undefined
-  }, "\u2764"), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
-  }, "\uD83D\uDCAC")), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, props.likes.length, " likes")), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
-  }, props.owner.username), " ", props.content)));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Post);
+/* harmony default export */ __webpack_exports__["default"] = (PostStyles);
 
 /***/ }),
 
-/***/ "./components/Posts.js":
-/*!*****************************!*\
-  !*** ./components/Posts.js ***!
-  \*****************************/
-/*! exports provided: default */
+/***/ "./lib/query.js":
+/*!**********************!*\
+  !*** ./lib/query.js ***!
+  \**********************/
+/*! exports provided: SINGLE_USER_QUERY, ALL_POSTS_QUERY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Post */ "./components/Post.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SINGLE_USER_QUERY", function() { return SINGLE_USER_QUERY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_POSTS_QUERY", function() { return ALL_POSTS_QUERY; });
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
 
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Posts.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
+const SINGLE_USER_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+  query SINGLE_USER_QUERY {
+    user {
+      id
+      username
+      email
+    }
+  }
+`;
+const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
   query ALL_POSTS_QUERY {
     posts {
       id
@@ -392,52 +510,90 @@ const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
       }
     }
   }
-`;
+`; // export default { ALL_POSTS_QUERY }
 
-const Posts = () => __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Query"], {
-  query: ALL_POSTS_QUERY,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 22
-  },
-  __self: undefined
-}, ({
-  data,
-  error,
-  loading
-}) => {
-  if (error) return __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: undefined
-  }, "Error");
-  if (loading) return __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
-  }, "..Loading");
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  }, data.posts.map(post => __jsx(_Post__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    key: post.id
-  }, post, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
-  }))));
-});
+/***/ }),
 
-/* harmony default export */ __webpack_exports__["default"] = (Posts);
+/***/ "./lib/secureRoute.js":
+/*!****************************!*\
+  !*** ./lib/secureRoute.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-cookies */ "next-cookies");
+/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_auth_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/auth/Login */ "./components/auth/Login.js");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _lib_query__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/query */ "./lib/query.js");
+
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/lib/secureRoute.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+const secureRoute = Component => {
+  class Wrapper extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+    render() {
+      if (!this.props.token) return __jsx(_components_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      });
+      return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_4__["Query"], {
+        query: _lib_query__WEBPACK_IMPORTED_MODULE_5__["SINGLE_USER_QUERY"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, ({
+        data,
+        error
+      }) => {
+        if (error) return __jsx(_components_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          },
+          __self: this
+        });
+        return __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, data, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14
+          },
+          __self: this
+        }));
+      });
+    }
+
+  }
+
+  Wrapper.getInitialProps = async ctx => {
+    const {
+      token
+    } = next_cookies__WEBPACK_IMPORTED_MODULE_2___default()(ctx);
+    return {
+      token
+    };
+  };
+
+  return Wrapper;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (secureRoute);
 
 /***/ }),
 
@@ -497,11 +653,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Home */ "./components/Home.js");
-/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-cookies */ "next-cookies");
-/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_Router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/Router */ "next/Router");
-/* harmony import */ var next_Router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_Router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_posts_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/posts/Home */ "./components/posts/Home.js");
+/* harmony import */ var _lib_secureRoute__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/secureRoute */ "./lib/secureRoute.js");
 
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/pages/index.js";
 
@@ -509,13 +662,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
 class Index extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
-    return __jsx(_components_Home__WEBPACK_IMPORTED_MODULE_2__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
+    return __jsx(_components_posts_Home__WEBPACK_IMPORTED_MODULE_2__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 7
       },
       __self: this
     }));
@@ -523,18 +675,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 }
 
-Index.getInitialProps = async ctx => {
-  // make a higher order component or render prop?, check for existence of a token, if a valid token, make a request for the user object and send this down as a prop
-  // if there is no token, render the login component instead of whatever component was passed....
-  // Have to think about how that query is cahched
-  const {
-    token
-  } = next_cookies__WEBPACK_IMPORTED_MODULE_3___default()(ctx);
-  console.log(token);
-  return {};
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_secureRoute__WEBPACK_IMPORTED_MODULE_3__["default"])(Index));
 
 /***/ }),
 
@@ -580,17 +721,6 @@ module.exports = require("graphql-tag");
 /***/ (function(module, exports) {
 
 module.exports = require("next-cookies");
-
-/***/ }),
-
-/***/ "next/Router":
-/*!******************************!*\
-  !*** external "next/Router" ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/Router");
 
 /***/ }),
 

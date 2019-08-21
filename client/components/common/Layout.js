@@ -1,5 +1,7 @@
 import React from 'react'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyles from '../styles/GlobalStyles'
+import { Main, Section } from '../styles/LayoutStyles'
 import Meta from './Meta'
 import Header from './Header'
 
@@ -10,58 +12,14 @@ const theme = {
   maxWidth: '1000px'
 }
 
-const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'segoe-ui';
-    src: url('/static/Segoe-UI.woff')format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'segoe-ui';
-    src: url('/static/Segoe-UI-Bold.woff')format('woff2');
-    font-weight: bold;
-  }
-  html {
-    box-sizing: border-box;
-    font-size: 10px;
-  }
-  *, *:before, *:after {
-     box-sizing: inherit;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem;
-    font-family: 'segoe-ui'
-  }
-  a {
-    text-decoration: none;
-    color: ${theme.black}
-  }
-`
-const Main = styled.main`
-  background-color: ${({ theme }) => theme.lightGrey};
-  color: ${({ theme }) => theme.black};
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-`
-const Section = styled.section`
-  width: ${({ theme }) => theme.maxWidth};
-  min-height: 100vh;
-  padding-top: 12rem;
-`
-
-const Layout = () => (
+const Layout = props => (
   <ThemeProvider theme={theme}>
     <Main>
-      <GlobalStyle />
+      <GlobalStyles />
       <Meta />
       <Header />
       <Section>
-        {this.props.children}
+        {props.children}
       </Section>
     </Main>
   </ThemeProvider>   

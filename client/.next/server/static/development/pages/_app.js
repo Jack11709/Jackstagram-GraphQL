@@ -93,26 +93,31 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Header.js":
-/*!******************************!*\
-  !*** ./components/Header.js ***!
-  \******************************/
+/***/ "./components/common/Header.js":
+/*!*************************************!*\
+  !*** ./components/common/Header.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Header.js";
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Nav */ "./components/common/Nav.js");
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! underscore */ "underscore");
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(underscore__WEBPACK_IMPORTED_MODULE_4__);
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/common/Header.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-const HeaderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
+
+const HeaderStyles = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.header`
   position: fixed;
   width: 100%;
   height: 7.5rem;
@@ -126,28 +131,53 @@ const HeaderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.he
 }) => theme.darkGrey};
 `;
 
-const Header = () => __jsx(HeaderStyles, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
-  },
-  __self: undefined
-}, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
-}));
+class Header extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  constructor(...args) {
+    super(...args);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "state", {
+      collapsed: false
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleScroll", e => {
+      console.log(e);
+    });
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', underscore__WEBPACK_IMPORTED_MODULE_4___default.a.throttle(this.handleScroll, 500));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', underscore__WEBPACK_IMPORTED_MODULE_4___default.a.throttle);
+  }
+
+  render() {
+    return __jsx(HeaderStyles, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
 /***/ }),
 
-/***/ "./components/Layout.js":
-/*!******************************!*\
-  !*** ./components/Layout.js ***!
-  \******************************/
+/***/ "./components/common/Layout.js":
+/*!*************************************!*\
+  !*** ./components/common/Layout.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -157,12 +187,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! underscore */ "underscore");
-/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(underscore__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Layout.js";
+/* harmony import */ var _styles_GlobalStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/GlobalStyles */ "./components/styles/GlobalStyles.js");
+/* harmony import */ var _styles_LayoutStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/LayoutStyles */ "./components/styles/LayoutStyles.js");
+/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Meta */ "./components/common/Meta.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Header */ "./components/common/Header.js");
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/common/Layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -174,103 +205,54 @@ const theme = {
   darkGrey: '#DBDBDB',
   maxWidth: '1000px'
 };
-const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"]`
-  @font-face {
-    font-family: 'segoe-ui';
-    src: url('/static/Segoe-UI.woff')format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'segoe-ui';
-    src: url('/static/Segoe-UI-Bold.woff')format('woff2');
-    font-weight: bold;
-  }
-  html {
-    box-sizing: border-box;
-    font-size: 10px;
-  }
-  *, *:before, *:after {
-     box-sizing: inherit;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem;
-    font-family: 'segoe-ui'
-  }
-  a {
-    text-decoration: none;
-    color: ${theme.black}
-  }
-`;
-const Main = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.main`
-  background-color: ${({
-  theme
-}) => theme.lightGrey};
-  color: ${({
-  theme
-}) => theme.black};
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-`;
-const Section = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  width: ${({
-  theme
-}) => theme.maxWidth};
-  min-height: 100vh;
-  padding-top: 12rem;
-`;
 
-const Layout = () => __jsx(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
+const Layout = props => __jsx(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
   theme: theme,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 59
+    lineNumber: 16
   },
   __self: undefined
-}, __jsx(Main, {
+}, __jsx(_styles_LayoutStyles__WEBPACK_IMPORTED_MODULE_3__["Main"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60
+    lineNumber: 17
   },
   __self: undefined
-}, __jsx(GlobalStyle, {
+}, __jsx(_styles_GlobalStyles__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 61
+    lineNumber: 18
   },
   __self: undefined
-}), __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}), __jsx(_Meta__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 62
+    lineNumber: 19
   },
   __self: undefined
-}), __jsx(_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}), __jsx(_Header__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 63
+    lineNumber: 20
   },
   __self: undefined
-}), __jsx(Section, {
+}), __jsx(_styles_LayoutStyles__WEBPACK_IMPORTED_MODULE_3__["Section"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 64
+    lineNumber: 21
   },
   __self: undefined
-}, undefined.props.children)));
+}, props.children)));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
 
-/***/ "./components/Meta.js":
-/*!****************************!*\
-  !*** ./components/Meta.js ***!
-  \****************************/
+/***/ "./components/common/Meta.js":
+/*!***********************************!*\
+  !*** ./components/common/Meta.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -280,7 +262,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Meta.js";
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/common/Meta.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -334,10 +316,10 @@ const Meta = () => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
 
 /***/ }),
 
-/***/ "./components/Nav.js":
-/*!***************************!*\
-  !*** ./components/Nav.js ***!
-  \***************************/
+/***/ "./components/common/Nav.js":
+/*!**********************************!*\
+  !*** ./components/common/Nav.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -349,17 +331,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/SearchBar */ "./components/styles/SearchBar.js");
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Nav.js";
+/* harmony import */ var _styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/SearchBar */ "./components/styles/SearchBar.js");
+var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/common/Nav.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
- // // Is there a different way to do the below?
-// componentDidMount() {
-//   window.addEventListener('scroll', _.throttle(this.handleScroll, 500))
-// }
-// handleScroll = e => console.log(e)
 
 const Navbar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav`
   width: ${({
@@ -382,97 +359,176 @@ const IconContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.d
   cursor: pointer;
 `;
 
-class Nav extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  render() {
-    return __jsx(Navbar, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36
-      },
-      __self: this
-    }, __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36
-      },
-      __self: this
-    }, "\uD83D\uDCF7 | ", __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36
-      },
-      __self: this
-    }, "Jackstagram"))), __jsx(_styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    }, __jsx("input", {
-      placeholder: "\uD83D\uDD0E Search",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38
-      },
-      __self: this
-    })), __jsx(IconContainer, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/new",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, "\u2795")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/explore",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    }, __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    }, "\u2764")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/profile",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }, __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }, "\uD83D\uDC71"))));
-  }
-
-}
+const Nav = () => __jsx(Navbar, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25
+  },
+  __self: undefined
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}, "\uD83D\uDCF7 | ", __jsx("span", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}, "Jackstagram"))), __jsx(_styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 27
+  },
+  __self: undefined
+}, __jsx("input", {
+  placeholder: "\uD83D\uDD0E Search",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 28
+  },
+  __self: undefined
+})), __jsx(IconContainer, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 30
+  },
+  __self: undefined
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/new",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 31
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 31
+  },
+  __self: undefined
+}, "\u2795")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/explore",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 32
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 32
+  },
+  __self: undefined
+}, "\u2764")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/profile",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 33
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 33
+  },
+  __self: undefined
+}, "\uD83D\uDC71"))));
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
+
+/***/ }),
+
+/***/ "./components/styles/GlobalStyles.js":
+/*!*******************************************!*\
+  !*** ./components/styles/GlobalStyles.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const GlobalStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"]`
+  @font-face {
+    font-family: 'segoe-ui';
+    src: url('/static/Segoe-UI.woff')format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'segoe-ui';
+    src: url('/static/Segoe-UI-Bold.woff')format('woff2');
+    font-weight: bold;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  *, *:before, *:after {
+     box-sizing: inherit;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'segoe-ui'
+  }
+  a {
+    text-decoration: none;
+    color: ${({
+  theme
+}) => theme.black}
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (GlobalStyles);
+
+/***/ }),
+
+/***/ "./components/styles/LayoutStyles.js":
+/*!*******************************************!*\
+  !*** ./components/styles/LayoutStyles.js ***!
+  \*******************************************/
+/*! exports provided: Main, Section */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Main", function() { return Main; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Main = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.main`
+  background-color: ${({
+  theme
+}) => theme.lightGrey};
+  color: ${({
+  theme
+}) => theme.black};
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+const Section = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section`
+  width: ${({
+  theme
+}) => theme.maxWidth};
+  min-height: 100vh;
+  padding-top: 12rem;
+`;
 
 /***/ }),
 
@@ -671,6 +727,36 @@ function _asyncToGenerator(fn) {
 }
 
 module.exports = _asyncToGenerator;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 /***/ }),
 
@@ -1506,7 +1592,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_common_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/common/Layout */ "./components/common/Layout.js");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _lib_withData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/withData */ "./lib/withData.js");
@@ -1524,8 +1610,7 @@ class RootApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
     const {
       Component,
       pageProps,
-      apollo,
-      token
+      apollo
     } = this.props;
     return __jsx(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
       __source: {
@@ -1540,14 +1625,13 @@ class RootApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 11
       },
       __self: this
-    }, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_components_common_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
-      token: token || null,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13

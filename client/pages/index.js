@@ -1,5 +1,5 @@
 import Home from '../components/posts/Home'
-import nextCookie from 'next-cookies'
+import secureRoute from '../lib/secureRoute'
 
 class Index extends React.Component {
   render() {
@@ -9,14 +9,4 @@ class Index extends React.Component {
   }
 }
 
-Index.getInitialProps = async ctx => {
-  // make a higher order component or render prop?, check for existence of a token, if a valid token, make a request for the user object and send this down as a prop
-  // if there is no token, render the login component instead of whatever component was passed....
-  // Have to think about how that query is cahched
-  const { token } = nextCookie(ctx)
-  console.log(token)
-  return {}
-}
-
-
-export default Index
+export default secureRoute(Index)

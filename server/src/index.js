@@ -1,5 +1,6 @@
 const { GraphQLServer } = require('graphql-yoga')
 const { prisma } = require('./generated/prisma-client')
+const cookieParser = require('cookie-parser')
 const Mutation = require('./resolvers/Mutation')
 const Query = require('./resolvers/Query')
 const Subscription = require('./resolvers/Subscription')
@@ -13,6 +14,8 @@ const server = new GraphQLServer({
   context: request => ({ ...request, prisma })
 })
 
+server.express.use(cookieParser())
+
 const opts = {
   port: 4000,
   cors: {
@@ -20,6 +23,5 @@ const opts = {
     origin: ['http://localhost:3000'] 
   }
 };
-
 
 server.start(opts, () => console.log('Server is running on port 4000'))

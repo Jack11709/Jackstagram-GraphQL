@@ -7,7 +7,7 @@ const Searchbar = styled.div`
   input {
     width: 250px;
     appearance: none;
-    background-color: ${({theme}) => theme.lightGrey};
+    background-color: ${({ theme }) => theme.lightGrey};
     outline: none;
     border: 1px solid ${({ theme }) => theme.darkGrey};
     text-align: center;
