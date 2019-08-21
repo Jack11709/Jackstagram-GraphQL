@@ -1,22 +1,6 @@
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
+import { ALL_POSTS_QUERY } from '../../lib/query'
 import Post from './Post'
-
-const ALL_POSTS_QUERY = gql`
-  query ALL_POSTS_QUERY {
-    posts {
-      id
-      content
-      image
-      owner {
-        username
-      }
-      likes {
-        id
-      }
-    }
-  }
-`
 
 const Posts = () => (
   <Query query={ALL_POSTS_QUERY}>

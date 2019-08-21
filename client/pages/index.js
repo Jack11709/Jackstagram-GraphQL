@@ -1,4 +1,4 @@
-import Home from '../components/Home'
+import Home from '../components/posts/Home'
 import nextCookie from 'next-cookies'
 
 class Index extends React.Component {

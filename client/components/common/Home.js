@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Posts from '../Posts/Posts'
+import Posts from '../posts/Posts'
 
 const HomeContainer = styled.div`
   display: flex;
