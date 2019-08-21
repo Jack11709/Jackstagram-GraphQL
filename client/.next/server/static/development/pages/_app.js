@@ -109,9 +109,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Header.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const HeaderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
+  position: fixed;
   width: 100%;
   height: 7.5rem;
   background: white;
@@ -124,16 +126,16 @@ const HeaderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.he
 }) => theme.darkGrey};
 `;
 
-const Header = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderStyles, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 16
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+const Header = () => __jsx(HeaderStyles, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 17
+  },
+  __self: undefined
+}, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
   },
   __self: undefined
 }));
@@ -155,9 +157,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! underscore */ "underscore");
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(underscore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Layout.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -215,52 +221,47 @@ const Section = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section
   theme
 }) => theme.maxWidth};
   min-height: 100vh;
-  padding-top: 6rem;
+  padding-top: 12rem;
 `;
 
-class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
-      theme: theme,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GlobalStyle, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: this
-    }, this.props.children)));
-  }
-
-}
+const Layout = () => __jsx(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
+  theme: theme,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 59
+  },
+  __self: undefined
+}, __jsx(Main, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 60
+  },
+  __self: undefined
+}, __jsx(GlobalStyle, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 61
+  },
+  __self: undefined
+}), __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 62
+  },
+  __self: undefined
+}), __jsx(_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 63
+  },
+  __self: undefined
+}), __jsx(Section, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 64
+  },
+  __self: undefined
+}, undefined.props.children)));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -281,15 +282,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Meta.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Meta = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+const Meta = () => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 4
   },
   __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+}, __jsx("meta", {
   name: "viewport",
   content: "width=device-width, initial-scale=1",
   __source: {
@@ -297,14 +299,14 @@ const Meta = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ne
     lineNumber: 5
   },
   __self: undefined
-}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+}), __jsx("meta", {
   charSet: "utf-8",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
-}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+}), __jsx("link", {
   rel: "shortcut icon",
   href: "/static/camera.ico",
   __source: {
@@ -312,7 +314,7 @@ const Meta = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ne
     lineNumber: 7
   },
   __self: undefined
-}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+}), __jsx("link", {
   href: "https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap",
   rel: "stylesheet",
   __source: {
@@ -320,7 +322,7 @@ const Meta = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ne
     lineNumber: 8
   },
   __self: undefined
-}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+}), __jsx("title", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 9
@@ -350,8 +352,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/SearchBar */ "./components/styles/SearchBar.js");
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Nav.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+ // // Is there a different way to do the below?
+// componentDidMount() {
+//   window.addEventListener('scroll', _.throttle(this.handleScroll, 500))
+// }
+// handleScroll = e => console.log(e)
 
 const Navbar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav`
   width: ${({
@@ -374,90 +382,95 @@ const IconContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.d
   cursor: pointer;
 `;
 
-const Nav = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Navbar, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 25
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 26
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 26
-  },
-  __self: undefined
-}, "\uD83D\uDCF7 | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 26
-  },
-  __self: undefined
-}, "Jackstagram"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 27
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-  placeholder: "\uD83D\uDD0E Search",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 28
-  },
-  __self: undefined
-})), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconContainer, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 30
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/new",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 31
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 31
-  },
-  __self: undefined
-}, "\u2795")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/explore",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 32
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 32
-  },
-  __self: undefined
-}, "\u2764")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/profile",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 33
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 33
-  },
-  __self: undefined
-}, "\uD83D\uDC71"))));
+class Nav extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx(Navbar, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "\uD83D\uDCF7 | ", __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "Jackstagram"))), __jsx(_styles_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, __jsx("input", {
+      placeholder: "\uD83D\uDD0E Search",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    })), __jsx(IconContainer, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/new",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, "\u2795")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/explore",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, "\u2764")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/profile",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, "\uD83D\uDC71"))));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
 
@@ -856,7 +869,7 @@ function formatUrl(url) {
 
 let observer;
 const listeners = new _map.default();
-const IntersectionObserver =  false ? undefined : null;
+const IntersectionObserver = false ? undefined : null;
 
 function getObserver() {
   // Return shared instance of IntersectionObserver if already created
@@ -904,8 +917,9 @@ const listenToIntersections = (el, cb) => {
 };
 
 class Link extends _react.Component {
-  constructor() {
-    super(...arguments);
+  constructor(props) {
+    super(props);
+    this.p = void 0;
 
     this.cleanUpListeners = () => {};
 
@@ -934,7 +948,7 @@ class Link extends _react.Component {
       } = this.formatUrls(this.props.href, this.props.as);
 
       if (!isLocal(href)) {
-        // ignore click if it's outside our scope
+        // ignore click if it's outside our scope (e.g. https://google.com)
         return;
       }
 
@@ -965,6 +979,14 @@ class Link extends _react.Component {
         }
       });
     };
+
+    if (true) {
+      if (props.prefetch) {
+        console.warn('Next.js auto-prefetches automatically based on viewport. The prefetch attribute is no longer needed. More: https://err.sh/zeit/next.js/prefetch-true-deprecated');
+      }
+    }
+
+    this.p = props.prefetch !== false;
   }
 
   componentWillUnmount() {
@@ -972,7 +994,7 @@ class Link extends _react.Component {
   }
 
   handleRef(ref) {
-    if (this.props.prefetch && IntersectionObserver && ref && ref.tagName) {
+    if (this.p && IntersectionObserver && ref && ref.tagName) {
       this.cleanUpListeners();
       this.cleanUpListeners = listenToIntersections(ref, () => {
         this.prefetch();
@@ -983,7 +1005,7 @@ class Link extends _react.Component {
 
 
   prefetch() {
-    if (!this.props.prefetch || "undefined" === 'undefined') return; // Prefetch the JSON page if asked (only in the client)
+    if (!this.p || true) return; // Prefetch the JSON page if asked (only in the client)
 
     const {
       pathname
@@ -1003,7 +1025,7 @@ class Link extends _react.Component {
     const {
       href,
       as
-    } = this.formatUrls(this.props.href, this.props.as); // Deprecated. Warning shown by propType check. If the childen provided is a string (<Link>example</Link>) we wrap it in an <a> tag
+    } = this.formatUrls(this.props.href, this.props.as); // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
 
     if (typeof children === 'string') {
       children = _react.default.createElement("a", null, children);
@@ -1013,7 +1035,15 @@ class Link extends _react.Component {
     const child = _react.Children.only(children);
 
     const props = {
-      ref: el => this.handleRef(el),
+      ref: el => {
+        this.handleRef(el);
+
+        if (child && typeof child === 'object' && child.ref) {
+          if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
+            child.ref.current = el;
+          }
+        }
+      },
       onMouseEnter: e => {
         if (child.props && typeof child.props.onMouseEnter === 'function') {
           child.props.onMouseEnter(e);
@@ -1048,9 +1078,6 @@ class Link extends _react.Component {
 }
 
 Link.propTypes = void 0;
-Link.defaultProps = {
-  prefetch: true
-};
 
 if (true) {
   const warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
@@ -1132,8 +1159,7 @@ const singletonRouter = {
 
 }; // Create public properties and methods of the router in the singletonRouter
 
-const urlPropertyFields = ['pathname', 'route', 'query', 'asPath'];
-const propertyFields = ['components'];
+const urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
 const routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 const coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
@@ -1143,7 +1169,7 @@ const coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'befo
   }
 
 });
-propertyFields.concat(urlPropertyFields).forEach(field => {
+urlPropertyFields.forEach(field => {
   // Here we need to use Object.defineProperty because, we need to return
   // the property assigned to the actual router
   // The value might get changed as we change routes and this is the
@@ -1239,18 +1265,6 @@ function makePublicRouterInstance(router) {
 
 
   instance.events = _router2.default.events;
-  propertyFields.forEach(field => {
-    // Here we need to use Object.defineProperty because, we need to return
-    // the property assigned to the actual router
-    // The value might get changed as we change routes and this is the
-    // proper way to access it
-    (0, _defineProperty.default)(instance, field, {
-      get() {
-        return _router[field];
-      }
-
-    });
-  });
   coreMethodFields.forEach(field => {
     instance[field] = function () {
       return _router[field](...arguments);
@@ -1389,9 +1403,9 @@ class App extends _react.default.Component {
       pageProps
     } = this.props;
     const url = createUrl(router);
-    return _react.default.createElement(Container, null, _react.default.createElement(Component, (0, _extends2.default)({}, pageProps, {
+    return _react.default.createElement(Component, (0, _extends2.default)({}, pageProps, {
       url: url
-    })));
+    }));
   }
 
 } // @deprecated noop for now until removal
@@ -1496,32 +1510,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _lib_withData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/withData */ "./lib/withData.js");
-/* harmony import */ var next_redirect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next-redirect */ "next-redirect");
-/* harmony import */ var next_redirect__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_redirect__WEBPACK_IMPORTED_MODULE_6__);
 
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/pages/_app.js";
 
-
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
 
 class RootApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
-  static async getInitialProps({
-    ctx
-  }) {
-    const token = ctx.req.headers.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-
-    if (!token) {
-      console.log('there is no token redirect to login');
-    }
-
-    return {
-      token
-    };
-  }
-
   render() {
     const {
       Component,
@@ -1529,29 +1527,30 @@ class RootApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       apollo,
       token
     } = this.props;
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    return __jsx(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 10
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
+    }, __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
       client: apollo,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 11
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 12
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      token: token || null,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 13
       },
       __self: this
     })))));
@@ -1638,17 +1637,6 @@ module.exports = require("core-js/library/fn/object/get-own-property-descriptor"
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/promise");
-
-/***/ }),
-
-/***/ "next-redirect":
-/*!********************************!*\
-  !*** external "next-redirect" ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next-redirect");
 
 /***/ }),
 
@@ -1770,6 +1758,17 @@ module.exports = require("react-apollo");
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ "underscore":
+/*!*****************************!*\
+  !*** external "underscore" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("underscore");
 
 /***/ }),
 

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -109,6 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Posts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Posts */ "./components/Posts.js");
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Home.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const HomeContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
@@ -138,31 +139,31 @@ const Aside = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 
 class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HomeContainer, {
+    return __jsx(HomeContainer, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 32
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostContainer, {
+    }, __jsx(PostContainer, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 33
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Posts__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_Posts__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 34
       },
       __self: this
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Aside, {
+    })), __jsx(Aside, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 36
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 37
@@ -192,6 +193,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Post.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const PostStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   max-width: 100%;
@@ -238,56 +240,56 @@ const PostStyles = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 `;
 
 const Post = props => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostStyles, {
+  return __jsx(PostStyles, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, __jsx("div", {
     className: "post-top",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
     },
     __self: undefined
-  }, "\uD83D\uDC71 ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "\uD83D\uDC71 ", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
     },
     __self: undefined
-  }, props.owner.username))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.owner.username))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 53
     },
     __self: undefined
-  }, "\u25AA\u25AA\u25AA"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "\u25AA\u25AA\u25AA"))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, __jsx("img", {
     src: props.image,
     alt: props.image,
     __source: {
@@ -295,51 +297,51 @@ const Post = props => {
       lineNumber: 57
     },
     __self: undefined
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), __jsx("div", {
     className: "post-bottom",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, __jsx("div", {
     className: "bottom-icons",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
     },
     __self: undefined
-  }, "\u2764"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "\u2764"), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: undefined
-  }, "\uD83D\uDCAC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "\uD83D\uDCAC")), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
     },
     __self: undefined
-  }, props.likes.length, " likes")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.likes.length, " likes")), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
@@ -372,6 +374,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/Posts.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
@@ -391,7 +394,7 @@ const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
   }
 `;
 
-const Posts = () => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Query"], {
+const Posts = () => __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Query"], {
   query: ALL_POSTS_QUERY,
   __source: {
     fileName: _jsxFileName,
@@ -403,27 +406,27 @@ const Posts = () => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(r
   error,
   loading
 }) => {
-  if (error) return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: undefined
   }, "Error");
-  if (loading) return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: undefined
   }, "..Loading");
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }, data.posts.map(post => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Post__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, data.posts.map(post => __jsx(_Post__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     key: post.id
   }, post, {
     __source: {
@@ -495,24 +498,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Home */ "./components/Home.js");
+/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-cookies */ "next-cookies");
+/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_Router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/Router */ "next/Router");
+/* harmony import */ var next_Router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_Router__WEBPACK_IMPORTED_MODULE_4__);
 
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/pages/index.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-const Index = props => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Home__WEBPACK_IMPORTED_MODULE_2__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 3
-  },
-  __self: undefined
-}));
+
+
+class Index extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  render() {
+    return __jsx(_components_Home__WEBPACK_IMPORTED_MODULE_2__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }));
+  }
+
+}
+
+Index.getInitialProps = async ctx => {
+  // make a higher order component or render prop?, check for existence of a token, if a valid token, make a request for the user object and send this down as a prop
+  // if there is no token, render the login component instead of whatever component was passed....
+  // Have to think about how that query is cahched
+  const {
+    token
+  } = next_cookies__WEBPACK_IMPORTED_MODULE_3___default()(ctx);
+  console.log(token);
+  return {};
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -543,6 +569,28 @@ module.exports = require("core-js/library/fn/object/assign");
 /***/ (function(module, exports) {
 
 module.exports = require("graphql-tag");
+
+/***/ }),
+
+/***/ "next-cookies":
+/*!*******************************!*\
+  !*** external "next-cookies" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-cookies");
+
+/***/ }),
+
+/***/ "next/Router":
+/*!******************************!*\
+  !*** external "next/Router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/Router");
 
 /***/ }),
 

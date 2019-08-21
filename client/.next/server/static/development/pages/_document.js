@@ -583,7 +583,7 @@ Document.childContextTypes = {
   _documentProps: _propTypes.default.any,
   _devOnlyInvalidateCacheQueryString: _propTypes.default.string
   /**
-  * `getInitialProps` hook returns the context object with the addition of `renderPage`. `
+  * `getInitialProps` hook returns the context object with the addition of `renderPage`.
   * `renderPage` callback executes `React` rendering logic synchronously to support server-rendering wrappers
   */
 
@@ -1014,7 +1014,7 @@ class NextScript extends _react.Component {
 
     const pageScript = [_react.default.createElement("script", (0, _extends2.default)({
       async: true,
-      id: "__NEXT_PAGE__" + page,
+      "data-next-page": page,
       key: page,
       src: assetPrefix + (dynamicBuildId ? "/_next/static/client/pages" + getPageFile(page, buildId) : "/_next/static/" + buildId + "/pages" + getPageFile(page)) + _devOnlyInvalidateCacheQueryString,
       nonce: this.props.nonce,
@@ -1022,7 +1022,7 @@ class NextScript extends _react.Component {
     },  false ? undefined : {})),  false && false];
     const appScript = [_react.default.createElement("script", (0, _extends2.default)({
       async: true,
-      id: "__NEXT_PAGE__/_app",
+      "data-next-page": "/_app",
       src: assetPrefix + (dynamicBuildId ? "/_next/static/client/pages/_app." + buildId + ".js" : "/_next/static/" + buildId + "/pages/_app.js") + _devOnlyInvalidateCacheQueryString,
       key: "_app",
       nonce: this.props.nonce,
@@ -1118,6 +1118,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/pages/_document.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
@@ -1128,7 +1129,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
 
     try {
       ctx.renderPage = () => originalRenderPage({
-        enhanceApp: App => props => sheet.collectStyles(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+        enhanceApp: App => props => sheet.collectStyles(__jsx(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 12
@@ -1139,7 +1140,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
 
       const initialProps = await next_document__WEBPACK_IMPORTED_MODULE_3___default.a.getInitialProps(ctx);
       return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, initialProps, {
-        styles: react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, initialProps.styles, sheet.getStyleElement())
+        styles: __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, initialProps.styles, sheet.getStyleElement())
       });
     } finally {
       sheet.seal();

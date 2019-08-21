@@ -17,6 +17,9 @@
       "jsx": true
     }
   },
+  "globals": {
+    "React": true
+  },
   "rules": {
     "brace-style": "error",
     "camelcase": ["error", { "properties": "never" }],
