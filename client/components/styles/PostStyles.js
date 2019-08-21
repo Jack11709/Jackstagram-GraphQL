@@ -7,7 +7,7 @@ const PostStyles = styled.div`
   margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: 1.2rem;
   letter-spacing: .05rem;
   div.post-top {

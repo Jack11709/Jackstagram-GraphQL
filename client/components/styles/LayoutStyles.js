@@ -9,7 +9,6 @@ export const Main = styled.main`
   min-height: 100vh;
 `
 export const Section = styled.section`
-  width: ${({ theme }) => theme.maxWidth};
   min-height: 100vh;
-  padding-top: 12rem;
+  padding-top: ${({ top }) => top ? '0' : '12rem'};
 `

@@ -1,5 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
+import { withRouter } from 'next/router'
 import GlobalStyles from '../styles/GlobalStyles'
 import { Main, Section } from '../styles/LayoutStyles'
 import Meta from './Meta'
@@ -18,11 +19,11 @@ const Layout = props => (
       <GlobalStyles />
       <Meta />
       <Header />
-      <Section>
+      <Section top={props.router.pathname === '/login'}>
         {props.children}
       </Section>
     </Main>
   </ThemeProvider>   
 )
 
-export default Layout
+export default withRouter(Layout)

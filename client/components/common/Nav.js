@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import SearchBar from '../styles/SearchBar'
 
+
 const Navbar = styled.nav`
   width: ${({ theme }) => theme.maxWidth};
   display: flex;

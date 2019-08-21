@@ -1,5 +1,8 @@
 import PostStyles from '../styles/PostStyles'
 
+// TODO lazy load these images!
+// TODO Sort out pagination 
+
 const Post = props => {
   return (
     <PostStyles>

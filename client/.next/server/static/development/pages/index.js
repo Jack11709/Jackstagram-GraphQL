@@ -93,39 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/auth/Login.js":
-/*!**********************************!*\
-  !*** ./components/auth/Login.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/auth/Login.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const Login = () => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 2
-  },
-  __self: undefined
-}, __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 3
-  },
-  __self: undefined
-}, "Login Page"));
-
-/* harmony default export */ __webpack_exports__["default"] = (Login);
-
-/***/ }),
-
 /***/ "./components/posts/Home.js":
 /*!**********************************!*\
   !*** ./components/posts/Home.js ***!
@@ -226,41 +193,24 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/jackmay/learning-dev/graphql-app/jackstagram/client/components/posts/Post.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
+ // TODO lazy load these images!
+// TODO Sort out pagination 
 
 const Post = props => {
   return __jsx(_styles_PostStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 8
     },
     __self: undefined
   }, __jsx("div", {
     className: "post-top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 9
     },
     __self: undefined
   }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, "\uD83D\uDC71 ", __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, props.owner.username))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -272,10 +222,28 @@ const Post = props => {
       lineNumber: 11
     },
     __self: undefined
-  }, "\u25AA\u25AA\u25AA"))), __jsx("div", {
+  }, "\uD83D\uDC71 ", __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, props.owner.username))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
+    },
+    __self: undefined
+  }, "\u25AA\u25AA\u25AA"))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("img", {
@@ -283,57 +251,57 @@ const Post = props => {
     alt: props.image,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
   })), __jsx("div", {
     className: "post-bottom",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("div", {
     className: "bottom-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 21
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 22
     },
     __self: undefined
   }, "\u2764"), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: undefined
   }, "\uD83D\uDCAC")), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
   }, props.likes.length, " likes")), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: undefined
   }, props.owner.username), " ", props.content)));
@@ -435,7 +403,7 @@ const PostStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: 1.2rem;
   letter-spacing: .05rem;
   div.post-top {
@@ -526,9 +494,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-cookies */ "next-cookies");
-/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_auth_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/auth/Login */ "./components/auth/Login.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-cookies */ "next-cookies");
+/* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _lib_query__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/query */ "./lib/query.js");
@@ -544,13 +513,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 const secureRoute = Component => {
   class Wrapper extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     render() {
-      if (!this.props.token) return __jsx(_components_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9
-        },
-        __self: this
-      });
       return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_4__["Query"], {
         query: _lib_query__WEBPACK_IMPORTED_MODULE_5__["SINGLE_USER_QUERY"],
         __source: {
@@ -562,17 +524,16 @@ const secureRoute = Component => {
         data,
         error
       }) => {
-        if (error) return __jsx(_components_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 13
-          },
-          __self: this
-        });
+        if (error) {
+          // ! really need to find a better way to do this, ideally I make this query in get intial props
+          next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/login');
+          return null;
+        }
+
         return __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, data, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 18
           },
           __self: this
         }));
@@ -584,7 +545,20 @@ const secureRoute = Component => {
   Wrapper.getInitialProps = async ctx => {
     const {
       token
-    } = next_cookies__WEBPACK_IMPORTED_MODULE_2___default()(ctx);
+    } = next_cookies__WEBPACK_IMPORTED_MODULE_3___default()(ctx); // ? maybe something with the apollo cache? or make a query without the query component
+
+    if (!token && ctx.res) {
+      ctx.res.writeHead(302, {
+        Location: '/login'
+      });
+      ctx.res.end();
+      return;
+    }
+
+    if (!token) {
+      next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/login');
+    }
+
     return {
       token
     };
@@ -721,6 +695,17 @@ module.exports = require("graphql-tag");
 /***/ (function(module, exports) {
 
 module.exports = require("next-cookies");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 
